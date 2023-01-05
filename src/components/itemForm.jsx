@@ -9,7 +9,7 @@ import Submit from './items/submit';
 import Terms from './items/terms';
 
 const ItemForm = ({ name, label }) => {
-
+    console.log('hola')
 
     return (
         <div>
