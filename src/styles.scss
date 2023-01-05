@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+body {
+  /* ff 3.6+ */
+  background:-moz-linear-gradient(28deg, rgba(151, 0, 255, 1) 0%, rgba(42, 125, 255, 1) 100%); 
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(28deg, rgba(151, 0, 255, 1) 0%, rgba(42, 125, 255, 1) 100%);
+  /* opera 11.10+ */
+  background:-o-linear-gradient(28deg, rgba(151, 0, 255, 1) 0%, rgba(42, 125, 255, 1) 100%);
+ /* ie 6-9 */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9700FF', endColorstr='#2A7DFF', GradientType=1 );
+ /* ie 10+ */
+  background:-ms-linear-gradient(28deg, rgba(151, 0, 255, 1) 0%, rgba(42, 125, 255, 1) 100%);
+  /* global 94%+ browsers support */
+  background:linear-gradient(28deg, rgba(151, 0, 255, 1) 0%, rgba(42, 125, 255, 1) 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+    height: 100vh;
+    .title {
+        font-size: 46px;
+        letter-spacing: 1px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        margin: 1rem;
+        padding: 10px;
+        border: 1px solid rgba(0,0,0,0.7);
+        border-radius: 20px;
+        height: 500px;
+        width: 400px;
+        box-shadow: 10px 10px 0px 5px rgba(0,0,0,0.4);
+    }
+}

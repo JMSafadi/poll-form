@@ -1,26 +1,38 @@
-import React, { useEffect } from 'react';
-// import apiItems from '../api/api'
+import React, { useEffect, useContext, Fragment } from 'react';
 import ItemForm from './itemForm';
-import { items } from '../api/db.json'
+import { Container, FormControl } from '@mui/material';
+import { userContext } from '../App';
+
 
 const Form = () => {
 
-    function apiItems () {
-        console.log(items.map(e => console.log(e)))
+    const items = useContext(userContext)
+
+    // function apiItems () {
+    //     console.log(items.map(e => console.log(e)))
+    // }
+
+    // useEffect(() => {
+    //     apiItems()
+    //   }, [])
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        alert('El formulario se ha enviado')
     }
 
-    useEffect(() => {
-        apiItems()
-      }, [])
-
     return (
-        <form className='form'>
-            {
+        <>
+            <div className='container'>
+            <h1 className='title'>Encuesta greydive</h1>
+                <form className='form' onSubmit={handleSubmit}>
+                {
 
-                items.map((e) => <ItemForm type={e.type} label={e.label} name={e.name} required={e.required} options={e.options} />)
-
-            }
-        </form>
+                    items.map((e) => <ItemForm key={e.type} name={e.name} label={e.label} />)
+                }
+                </form>
+            </div>
+        </>
     );
 }
 

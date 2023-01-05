@@ -1,14 +1,18 @@
-import React from 'react';
-import './App.css'
+import React, { useState } from 'react';
 import Form from './components/form'
+import { items } from './api/db.json'
+import './styles.scss'
+
+export const userContext = React.createContext()
 
 function App() {
 
+  const [apiData, setApiData] = useState(items);
+
   return (
-    <div className="App">
-      <h1>Encuesta greydive</h1>
+    <userContext.Provider value={apiData}>
       <Form/>
-    </div>
+    </userContext.Provider>
   )
 }
 
