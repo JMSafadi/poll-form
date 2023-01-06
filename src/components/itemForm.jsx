@@ -37,7 +37,6 @@ const ItemForm = () => {
     
     const saveData = async (e) => {
         e.preventDefault()
-        console.log(data)
 
         try {
             await addDoc(collection(db, `data`), {
