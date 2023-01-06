@@ -1,15 +1,16 @@
-import { FormControl, Input, InputLabel } from '@mui/material';
+import { Button, FormControl, Input, InputLabel } from '@mui/material';
 import React, { useState, useContext } from 'react';
 import { userContext } from '../App';
-import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
+import SendIcon from '@mui/icons-material/Send'
 import appFirebase from '../credentials'
+import { Snackbar, Stack } from '@mui/material';
+import Alert from '@mui/material/Alert';
 
-const ItemForm = () => {
+const formItems = () => {
     const db = getFirestore(appFirebase)
-
     const items = useContext(userContext)
     const countries = useContext(userContext)
-
     const options = countries[3].options
 
     const initialValues = {
@@ -21,12 +22,12 @@ const ItemForm = () => {
     }
 
     const [data, setData] = useState(initialValues)
+    const [open, setOpen] = useState(false);
 
     const getData = (e) => {
         setData({...data,
             [e.target.name] : e.target.value
         })
-        console.log(data.country_of_origin)
     }
 
     const getChecked = (e) => {
@@ -46,7 +47,7 @@ const ItemForm = () => {
             console.log(error)
         }
         setData({...initialValues})
-        alert('Formulario enviado!')
+        setOpen(true)
     }
 
     return (
@@ -64,22 +65,44 @@ const ItemForm = () => {
                     <Input type={items[2].type} id={items[2].name} required={items[2].required} name={items[2].name} value={data.birth_date} onChange={getData} />
                 </FormControl>
                 <FormControl>
-                    <label htmlFor={items[3].name}> {items[3].label} </label>
+                    <label htmlFor={items[3].name} className='select-label'> {items[3].label} </label>
                     <select type={items[3].type} id={items[3].name} required={items[3].required} name={items[3].name} value={data.country_of_origin} onChange={getData}>
+                        <option select='true' > </option>
                         {
-                            options.map((e) => <option key={e.label} value={e.label}> {e.label} </option>)
+                            options.map((e) => <option key={e.label} value={e.name} > {e.label} </option>)
                         }
                     </select>
                 </FormControl>
-                <FormControl>
+                <FormControl sx={{display:'flex', flexDirection:'row'}}>
                     <label htmlFor={items[4].name}> {items[4].label} </label>
                     <input label={items[4].label} type={items[4].type} id={items[4].name} required={items[4].required} name={items[4].name} value={data.terms_and_conditions} onChange={getChecked}/>
                 </FormControl>
-            <button type={items[5].type} variant='contained'>
+            <Button className='btn' sx={{backgroundColor:'#2D7AFF'}} type={items[5].type} variant='contained' endIcon={<SendIcon/>} >
                 {items[5].label}
-            </button>
+            </Button>
+
+            <Snackbar open={open} autoHideDuration={10000} onClose={() => setOpen(false)} >
+            <Stack spacing={2}>
+                <Alert sx={{fontSize:'22px',
+                            display:'flex',
+                            alignItems:'center', 
+                            justifyContent:'center', 
+                            height:'100px',
+                            backgroundColor:'#2E77FF',
+                            position:'relative'
+                            }} 
+                            variant="filled"
+                            severity="success"
+                            >
+                            Formulario enviado!
+                    <Button href='/respuestas' sx={{backgroundColor:'white', color:'black', margin:'20px'}} variant='contained'>
+                        Ver respuestas
+                    </Button>
+                </Alert>
+                </Stack>
+            </Snackbar>
         </form>
     )
 }
 
-export default ItemForm;
+export default formItems;

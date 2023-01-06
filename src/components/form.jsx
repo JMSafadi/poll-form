@@ -1,15 +1,12 @@
-import React, { useContext } from 'react';
-import ItemForm from './itemForm';
-import { userContext } from '../App';
+import React from 'react';
+import FormItems from './formItems';
 
 
 const Form = () => {
-    const items = useContext(userContext)
-
     return (
-        <div className='container'>
+        <div className='form-container'>
             <h1 className='title'>Encuesta greydive</h1>
-            <ItemForm/>
+            <FormItems/>
         </div>
     );
 }

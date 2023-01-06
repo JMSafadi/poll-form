@@ -3,7 +3,18 @@ import Form from './components/form'
 import { items } from './api/db.json'
 import './styles.scss'
 import Database from './components/database';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Form/>
+  },
+  {
+    path: '/respuestas',
+    element: <Database/>
+  }
+])
 
 export const userContext = React.createContext()
 
@@ -13,8 +24,7 @@ function App() {
 
   return (
     <userContext.Provider value={apiData}>
-      <Form/>
-      <Database/>
+      <RouterProvider router={router} />
     </userContext.Provider>
   )
 }
