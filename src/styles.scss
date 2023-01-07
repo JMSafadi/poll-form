@@ -80,3 +80,15 @@ body {
         width: 80%
     }
 }
+
+@media screen and (max-width: 450px) {
+    .form-container {
+        .title {
+            font-size: 22px;
+        }
+        .form {
+            width: 300px;
+            font-size: 14px;
+        }
+    }
+}
