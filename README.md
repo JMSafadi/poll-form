@@ -8,6 +8,7 @@ Tecnologias:
 * React-router
 * Sass
 
+Para correr el proyecto en sevidor local:
 ```
 npm install
 npm run dev
