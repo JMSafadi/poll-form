@@ -25,5 +25,6 @@ npm install
 npm run dev
 
 ```
-*Espero que les guste!*
+**Deploy:**
 [https://jmsafadi.github.io/challenge-form/](https://jmsafadi.github.io/challenge-form/)
+*Espero que les guste!*
