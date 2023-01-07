@@ -95,7 +95,7 @@ const formItems = () => {
                             severity="success"
                             >
                             Formulario enviado!
-                    <Button href='/respuestas' sx={{backgroundColor:'white', color:'black', margin:'20px'}} variant='contained'>
+                    <Button href='/challenge/respuestas' sx={{backgroundColor:'white', color:'black', margin:'20px'}} variant='contained'>
                         Ver respuestas
                     </Button>
                 </Alert>

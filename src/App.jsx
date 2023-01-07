@@ -7,11 +7,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/challenge',
     element: <Form/>
   },
   {
-    path: '/respuestas',
+    path: '/challenge/respuestas',
     element: <Database/>
   }
 ])
