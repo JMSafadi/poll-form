@@ -26,5 +26,6 @@ npm run dev
 
 ```
 **Deploy:**
-[https://jmsafadi.github.io/challenge-form/](https://jmsafadi.github.io/challenge-form/)
+[https://jmsafadi.github.io/challenge-form/]
+(https://jmsafadi.github.io/challenge-form/)
 *Espero que les guste!*
