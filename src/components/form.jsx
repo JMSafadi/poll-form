@@ -1,7 +1,6 @@
 import React from 'react';
 import FormItems from './formItems';
 
-
 const Form = () => {
     return (
         <div className='form-container'>

@@ -5,15 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCSg64-4B2jhFjnjyoQ7ivcO_i5X_YBhkE",
-  authDomain: "challenge-grey-20855.firebaseapp.com",
-  projectId: "challenge-grey-20855",
-  storageBucket: "challenge-grey-20855.appspot.com",
-  messagingSenderId: "302260013444",
-  appId: "1:302260013444:web:9431d0b48e79dc4240b5d1"
+  apiKey: "AIzaSyCUbEgWRYJXZNMZ8dbkn33pfzw_wpAH5oo",
+  authDomain: "challenge-grey-bf16c.firebaseapp.com",
+  projectId: "challenge-grey-bf16c",
+  storageBucket: "challenge-grey-bf16c.appspot.com",
+  messagingSenderId: "467349664013",
+  appId: "1:467349664013:web:ea959e35c7400ce93f4044"
 };
 
 // Initialize Firebase
 const appFirebase = initializeApp(firebaseConfig);
 
-export default appFirebase
+export default appFirebase;

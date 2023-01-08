@@ -4,6 +4,7 @@ import appFirebase from '../credentials'
 import { DataGrid } from '@mui/x-data-grid';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Database = () => {
     const db = getFirestore(appFirebase)
@@ -40,7 +41,6 @@ const Database = () => {
         { field: 'terms_and_conditions', headerName: '¿Acepta terminos?', width: 150 },
     ]
 
-    
     return (
         <div className='db-container'>
             <h1 className='title'>Respuestas</h1>
@@ -54,20 +54,21 @@ const Database = () => {
                     >
                     </DataGrid>
             </div>
-            <Button
-                href='/'
-                sx={{backgroundColor:'white',
-                    margin:'26px',
-                    '&:hover': {
-                        backgroundColor: '#2E77FF',
-                        color: 'white'
-                    }
-                }}
-                variant="outlined"
-                startIcon={<ArrowCircleLeftIcon />}
-                >
-                Volver
-            </Button>
+            <Link to='/' >
+                <Button
+                    sx={{backgroundColor:'white',
+                        margin:'26px',
+                        '&:hover': {
+                            backgroundColor: '#2E77FF',
+                            color: 'white'
+                        }
+                    }}
+                    variant="outlined"
+                    startIcon={<ArrowCircleLeftIcon />}
+                    >
+                    Volver
+                </Button>
+            </Link>
         </div>
     );  
 }

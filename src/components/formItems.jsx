@@ -6,6 +6,8 @@ import SendIcon from '@mui/icons-material/Send'
 import appFirebase from '../credentials'
 import { Snackbar, Stack } from '@mui/material';
 import Alert from '@mui/material/Alert';
+import { useNavigate, Route, Routes, Link } from 'react-router-dom';
+import Database from './database';
 
 const formItems = () => {
     const db = getFirestore(appFirebase)
@@ -95,11 +97,13 @@ const formItems = () => {
                             severity="success"
                             >
                             Formulario enviado!
-                    <Button href='/challenge/respuestas' sx={{backgroundColor:'white', color:'black', margin:'20px'}} variant='contained'>
-                        Ver respuestas
-                    </Button>
+                        <Link to='/respuestas'>
+                            <Button sx={{backgroundColor:'white', color:'black', margin:'20px'}} variant='contained'>
+                                Ver respuestas
+                            </Button>
+                        </Link>
                 </Alert>
-                </Stack>
+            </Stack>
             </Snackbar>
         </form>
     )
