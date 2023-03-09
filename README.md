@@ -18,7 +18,8 @@ Por último, traé las respuestas de la base de datos ya mencionada y mostralas 
 * React-router
 * Sass
 
-**Para correr el proyecto en sevidor local:**
+**Para correr el proyecto en sevidor local**
+Primero, clona el repositorio y despues corre los siguientes comandos:
 ```
 npm install
 npm run dev
