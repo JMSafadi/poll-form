@@ -6,8 +6,7 @@ import SendIcon from '@mui/icons-material/Send'
 import appFirebase from '../credentials'
 import { Snackbar, Stack } from '@mui/material';
 import Alert from '@mui/material/Alert';
-import { useNavigate, Route, Routes, Link } from 'react-router-dom';
-import Database from './database';
+import { Link } from 'react-router-dom';
 
 const formItems = () => {
     const db = getFirestore(appFirebase)

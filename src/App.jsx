@@ -3,18 +3,7 @@ import Form from './components/form'
 import { items } from './api/db.json'
 import './styles.scss'
 import Database from './components/database';
-import { createHashRouter, HashRouter, Route, RouterProvider, Routes } from 'react-router-dom';
-
-// const router = createHashRouter([
-//   {
-//     path:'/',
-//     element: <Form/>
-//   },
-//   {
-//     path:'/database',
-//     element: <Database/>
-//   }
-// ])
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 export const userContext = React.createContext()
 
