@@ -8,7 +8,6 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 export const userContext = React.createContext()
 
 function App() {
-
   const [apiData, setApiData] = useState(items);
 
   return (
