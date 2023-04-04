@@ -18,13 +18,13 @@ Por último, traé las respuestas de la base de datos ya mencionada y mostralas 
 * React-router
 * Sass
 
-**Para correr el proyecto en sevidor local:**
+**Para correr el proyecto en servidor local, clona el repositorio y despues corre los siguientes comandos:**
 ```
 npm install
 npm run dev
 
 ```
 **Deploy:**
-[https://jmsafadi.github.io/challenge-form/](https://jmsafadi.github.io/challenge-form/)
+[https://jmsafadi.github.io/challenge/](https://jmsafadi.github.io/challenge/)
 
 *Espero que les guste!*
