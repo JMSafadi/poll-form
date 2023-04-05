@@ -2,15 +2,15 @@
 
 **Consigna:**
 
-Realizar una app en React.js que lea el siguiente archivo JSON y genere con cada ítem una interfaz de app de encuesta (como Google Forms).
-En cuanto a diseño y estética tiene que diferir de Google Forms. Podés utilizar cualquier librería que creas necesaria.
+Create a React.js app that reads the following JSON file and generates a survey app interface (like Google Forms) for each item.
 
-Las respuestas de la encuesta deben ser enviadas a una base de datos de Firebase.
-Dicha base de datos tiene que ser de su propiedad. No nos compartas acceso a la base de datos.
+In terms of design and aesthetics, it should be different from Google Forms. You can use any library you deem necessary.
 
-Por último, traé las respuestas de la base de datos ya mencionada y mostralas en la misma app pero en otra ruta. Al presionar “enviar” en el formulario tiene que aparecer un mensaje y el acceso a esa ruta en donde estarán las respuestas. El diseño y estética queda a libre elección.
+Survey responses must be sent to a Firebase database that you own. Do not share access to the database with us.
 
-**Tecnologias:**
+Finally, retrieve the responses from the aforementioned database and display them in the same app but on a different route. When the "submit" button is pressed on the form, a message should appear with access to the route where the responses are located. Design and aesthetics are up to personal preference.
+
+**Technologies:**
 * Vite
 * React
 * Material UI
@@ -18,7 +18,7 @@ Por último, traé las respuestas de la base de datos ya mencionada y mostralas 
 * React-router
 * Sass
 
-**Para correr el proyecto en servidor local, clona el repositorio y despues corre los siguientes comandos:**
+**To run the project on a local server, clone the repository and then run the following commands:**
 ```
 npm install
 npm run dev
@@ -26,5 +26,3 @@ npm run dev
 ```
 **Deploy:**
 [https://jmsafadi.github.io/challenge/](https://jmsafadi.github.io/challenge/)
-
-*Espero que les guste!*
